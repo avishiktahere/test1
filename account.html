@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden; /* Hide overflow to prevent horizontal scrollbars */
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvkoY-Q3uPrX8lSki7GpVWfJ2Uo-JXA8adXQ&usqp=CAU') center/cover fixed; /* Set background image */
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(to right, #ff66b2, #66a3ff);
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s ease; /* Add transition for smooth color change */
+        }
+
+        nav a:hover {
+            color: #00ff00; /* Change color to green on hover */
+        }
+
+        nav a:active {
+            transform: scale(1.2); /* Add a scale effect on click */
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            margin: auto; /* Add this line to center the container horizontally */
+            position: absolute;
+            top: 50%; /* Center the container vertically */
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            font-family: 'Baloo 2', cursive;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+
+        .spacer {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div id="logo"><img src="" alt="SCAGE"></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="#">Achievements</a>
+            <a href="account.html">Account</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>User Authentication</h2>
+        <form id="authForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+
+            <div class="spacer"></div>
+            
+            <button type="button" onclick="signIn()">Sign In</button>
+            <div class="spacer"></div>
+            <p>Already have an account? <a href="#" onclick="showSignInForm()">Sign In</a></p>
+
+            <button type="button" onclick="signUp()">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        function signIn() {
+            alert('Sign In functionality goes here.');
+        }
+
+        function signUp() {
+            alert('Sign Up functionality goes here.');
+        }
+
+        function showSignInForm() {
+            // Implement code to toggle visibility or redirect to the sign-in form
+            alert('Redirect to sign-in form goes here.');
+        }
+    </script>
+
+</body>
+</html>
